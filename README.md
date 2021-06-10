@@ -3,15 +3,23 @@ Source code for **SIGIR 2021** paper **Rumor Detection on Social Media with Even
 
 ## Dependencies
 python 3.7
+
 pytorch 1.8.1
+
 pytorch_geometric 1.7.0
+
 
 ## Usage
 create "Twitter15graph" folder and "Twitter16graph" folder in the data folder
+
 python ./Process/getTwittergraph.py Twitter15 (pre-process the Twitter15 dataset)
+
 python ./Process/getTwittergraph.py Twitter16 (pre-process the Twitter16 dataset)
+
 python ./Model/train.py Twitter15 100 (Run RDEA on Twitter15 dataset)
+
 python ./Model/train.py Twitter16 100 (Run RDEA on Twitter16 dataset)
+
 
 ## Dataset
 To learn more about the dataset, please refer to [Bi-GCN](https://github.com/TianBian95/BiGCN) for more details.
