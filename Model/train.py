@@ -28,10 +28,8 @@ def classify(treeDic, x_test  , x_train,TDdroprate,BUdroprate,lr, weight_decay,p
         batch_idx = 0
         loss_all = 0
         tqdm_train_loader = tqdm(train_loader)
-        # ok
         for Batch_data in tqdm_train_loader:
             optimizer.zero_grad()
-            # not ok
             Batch_data = Batch_data.to(device)
             loss = unsup_model(Batch_data)
             loss_all += loss.item() * (max(Batch_data.batch) + 1)
@@ -87,7 +85,7 @@ def classify(treeDic, x_test  , x_train,TDdroprate,BUdroprate,lr, weight_decay,p
                                                                                                  loss.item(),
                                                                                                  train_acc))
             batch_idx = batch_idx + 1
-        #scheduler.step()
+            
         writer_train.add_scalar('train_loss', np.mean(avg_loss), global_step=epoch+1)
         writer_train.add_scalar('train_acc', np.mean(avg_acc), global_step=epoch+1)
         train_losses.append(np.mean(avg_loss))
@@ -188,27 +186,6 @@ for iter in range(iterations):
     fold2_x_test, fold2_x_train, \
     fold3_x_test, fold3_x_train, \
     fold4_x_test,fold4_x_train = load5foldData(datasetname)
-    # name = datasetname +"_data" + ".txt"
-    # with open(name, 'w') as f:
-    #     f.writelines(str(fold0_x_test))
-    #     f.write("\n")
-    #     f.writelines(str(fold0_x_train))
-    #     f.write("\n")
-    #     f.writelines(str(fold1_x_test))
-    #     f.write("\n")
-    #     f.writelines(str(fold1_x_train))
-    #     f.write("\n")
-    #     f.writelines(str(fold2_x_test))
-    #     f.write("\n")
-    #     f.writelines(str(fold2_x_train))
-    #     f.write("\n")
-    #     f.writelines(str(fold3_x_test))
-    #     f.write("\n")
-    #     f.writelines(str(fold3_x_train))
-    #     f.write("\n")
-    #     f.writelines(str(fold4_x_test))
-    #     f.write("\n")
-    #     f.writelines(str(fold4_x_train))
 
     treeDic=loadTree(datasetname)
     t1 = time.time()
