@@ -2,9 +2,9 @@
 Source code for SIGIR 2021 paper **Rumor Detection on Social Media with Event Augmentations**
 
 ## Dependencies
-python 3.7
-pytorch 1.8.1
-pytorch_geometric 1.7.0
+python 3.7  
+pytorch 1.8.1 
+pytorch_geometric 1.7.0 
 
 
 ## Usage
