@@ -2,8 +2,8 @@
 Source code for SIGIR 2021 paper **Rumor Detection on Social Media with Event Augmentations**
 
 ## Dependencies
-python 3.7  
-pytorch 1.8.1 
+python 3.7    
+pytorch 1.8.1   
 pytorch_geometric 1.7.0 
 
 
@@ -18,7 +18,7 @@ python ./Model/train.py Twitter16 100 # Run RDEA for 100 iterations on Twitter16
 ```
 
 ## Dataset
-We use Twitter15 and Twitter16 dataset for the experiment.
+We use Twitter15 and Twitter16 dataset for the experiment.    
 To learn more about the dataset, please refer to [Bi-GCN](https://github.com/TianBian95/BiGCN) for more details.
 
 ## About
